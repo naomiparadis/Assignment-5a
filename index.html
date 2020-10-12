@@ -6,18 +6,17 @@
 </head>
 
 <body>
-	
-	
-	
+		
 	
 <script type="text/javascript">
 	
+	//get order
 	var dogs, fries, sodas, TAX_PERCENT=.0625;
 	dogs = prompt("How many hotdogs would you like? ","1");
 	fries = prompt("How many fries would you like? ","1");
 	sodas = prompt("How many sodas would you like? ","1");
 	
-	
+	//calc cost of each
 	var d_cost = dogs * 3.25;
 	var f_cost = fries * 2.00;
 	var s_cost = sodas * 1.50;
@@ -28,6 +27,7 @@
 	var fcDec = f_cost.toFixed(2);
 	var scDec = s_cost.toFixed(2);
 	
+	//display output of item
 	document.write("<h1> Joe's Hotdogs </h1>");
 	document.write("<br>");
 	document.write("<h2> Your Order: </h2>");
@@ -39,7 +39,7 @@
 	document.write("# Sodas: "+ sodas + " at $1.50 is $" +scDec);
 	document.write("<br>");
 	
-
+	//calc subtotal, tax, discount, total
 	var subT, taxAmt, total;
 	subT = d_cost + f_cost + s_cost;
 	
@@ -59,6 +59,7 @@
 	var taxRound = (Math.round(taxAmt * 100) / 100).toFixed(2);
 	var totalRound = (Math.round(total * 100 / 100).toFixed(2));
 	
+	//display output subtotak, tax, discount, total
 	document.write("Meals Tax: $" + taxRound +"<br>");
 	document.write("Total: $" + totalRound); 
 
