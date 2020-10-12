@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Joe's Hotdogs</title>
+</head>
+
+<body>
+	
+	
+	
+	
+<script type="text/javascript">
+	
+	var dogs, fries, sodas, TAX_PERCENT=.0625;
+	dogs = prompt("How many hotdogs would you like? ","1");
+	fries = prompt("How many fries would you like? ","1");
+	sodas = prompt("How many sodas would you like? ","1");
+	
+	
+	var d_cost = dogs * 3.25;
+	var f_cost = fries * 2.00;
+	var s_cost = sodas * 1.50;
+	
+	
+	//w decimals
+	var dcDec = d_cost.toFixed(2);
+	var fcDec = f_cost.toFixed(2);
+	var scDec = s_cost.toFixed(2);
+	
+	document.write("<h1> Joe's Hotdogs </h1>");
+	document.write("<br>");
+	document.write("<h2> Your Order: </h2>");
+	document.write("<br>");
+	document.write("# Hotdogs: "+ dogs + " at $3.25 is $" +dcDec);
+	document.write("<br>");
+	document.write("# Fries: "+ fries + " at $2.00 is $" +fcDec);
+	document.write("<br>");
+	document.write("# Sodas: "+ sodas + " at $1.50 is $" +scDec);
+	document.write("<br>");
+	
+
+	var subT, taxAmt, total;
+	subT = d_cost + f_cost + s_cost;
+	
+	var disc = (subT >= 20) ? (subT * 0.1):0;
+	var discT = subT- disc;
+	
+	if (subT >= 20) document.write("You have qualified for our 10% discout <br>");
+	
+	
+	taxAmt = (discT) * TAX_PERCENT;
+	total = (discT) + taxAmt;
+	
+	//fix decimals
+	var dtDec = discT.toFixed(2);
+	document.write("Subtotal: $" + (dtDec) + "<br>");
+	
+	var taxRound = (Math.round(taxAmt * 100) / 100).toFixed(2);
+	var totalRound = (Math.round(total * 100 / 100).toFixed(2));
+	
+	document.write("Meals Tax: $" + taxRound +"<br>");
+	document.write("Total: $" + totalRound); 
+
+</script>
+	
+
+	
+</body>
+</html>
