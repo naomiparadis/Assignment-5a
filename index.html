@@ -46,7 +46,11 @@
 	var disc = (subT >= 20) ? (subT * 0.1):0;
 	var discT = subT- disc;
 	
-	if (subT >= 20) document.write("You have qualified for our 10% discout <br>");
+	if (subT >= 20) {
+		document.write("You have qualified for our 10% discout <br/>");
+	} else {
+		document.write("You have not qualified for a discount <br/>");
+	}
 	
 	
 	taxAmt = (discT) * TAX_PERCENT;
